@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Push Button</title>
+  <style>
+    .btnContainer{
+      background-color: green;
+      width:50%;
+      margin: 150px auto;
+      height:300px;
+      align-content: center;
+    }
+    .btn{
+      border-radius:50%;
+      border:solid black 10px;
+      width:50%;
+      height:250px;
+      font-weight: bold;
+      font-size:50px;
+      margin-left:25%;
+      background-color: white;
+    }
+    .btn:hover{
+      cursor:pointer;
+      background-color:lightblue;
+      color:green;
+    }
+  </style>
+</head>
+<body>
+  <div class="btnContainer">
+      <input type="submit" class="btn" value="PUSH" onclick="changeColor()">
+  </div>
+  <script>
+    const colors =["blue","violet","orange","yellow","green","brown","pink","red","french-grey",] ;
+
+    function changeColor(){
+      let randomColor = Math.floor(Math.random() * colors.length);
+      let btn = document.querySelector('.btn'); /*Find the first element in the document that has the class btn.
+                  Assign this element to the variable btn.*/
+      
+      btn.style.backgroundColor = colors[randomColor];
+
+      switch (randomColor){
+        case 0:
+          console.log(colors[0]); //blue
+          btn.style.color = "white" ;
+          break;
+        case 1:
+          console.log(colors[1]); //violet
+          btn.style.color = "white";
+          break;
+        case 2:
+          console.log(colors[2]);  //orange
+          btn.style.color ="black" ;
+          break;
+        case 3:
+          console.log(colors[3]);  //yellow
+          btn.style.color = "orange";
+          break;
+        case 4:
+          console.log(colors[4]);  //green
+          btn.style.color = "yellow" ;
+          break;
+        case 5:
+          console.log(colors[5]);  //brown
+          btn.style.color = "black" ;
+          break;
+        case 6:
+          console.log(colors[6]);  //pink
+          btn.style.color = "white";
+          break;
+        case 7:
+          console.log(colors[7]);  //red
+          btn.style.color = "black";
+          break;
+        case 8:
+          console.log(colors[8]);  //french-grey
+          btn.style.color = "grey";
+          break;
+      }
+    }
+    changeColor();
+  </script>
+</body>
+</html>
