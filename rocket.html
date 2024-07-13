@@ -14,15 +14,30 @@
         <div class="eng">
           <label for="engine">Engine:</label>
           <input type="button" name="engine" class="engineBtn" value="Off">
-        </div>
+        </div><br>
         <div class="distanceC">
-          <label for="distance">Distance:</label>
-          <input type="text" name="distance" class="distanceInput" value="50">
+          <label for="distance">Distance:</label><br>
+          <input type="number" name="distance" class="distanceInput" value="2600000000">
           <p>km</p>
         </div>
       </div>
+      <div class="destinationC">
+        <legend>Destination:</legend> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+          <input type="radio"  id="des1 " name="des" value="Mars">
+          <label for="des1">Mars<label>
+          <input type="radio" id="des2 " name="des"  value="Moon ">
+          <label for="des2">Moon<label>
+          <input type="radio"  id="des3 " name="des" value="Saturn ">
+          <label for="des3">Saturn</label>
+          <input type="radio"  id="des4 " name="des" value="Uranus ">
+          <label for="des4">Uranus</label>
+          <input type="radio"  id="des5 " name="des" value="Jupiter ">  
+          <label for="des5">Jupiter</label>
+      </div>
       <button class="launch">Launch</button><br><br><br>
       <label for="speed">Speed</label><br>
+      <input type="number" value="00000" class="speedInput">
+      <p>km/h</p><br><br>
       <input type="button" name="speed" value="+1">
       <input type="button" name="speed" value="+5">
       <input type="button" name="speed" value="-1">
