@@ -14,7 +14,7 @@
     height:200px;
     border-radius: 50%;
     padding:40px;
-    border:10px solid green;
+    border:10px solid grey;
     color: rgb(26, 52, 26);
     font-size:1.2rem;
     font-weight:bold;
@@ -60,4 +60,8 @@ p{
 
 .speedInput{
   width: 70px;
+}
+
+.destinationC{
+  display: none;
 }
