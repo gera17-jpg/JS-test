@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     let engineBtn = document.querySelector(".engineBtn");
-    let rocketStatus = { engine: engineBtn.value, speed: 0 };
+    let rocketStatus = { engine: engineBtn.value, speed: "" };
     let launcherBorder = document.getElementsByClassName("launch")[0];
     let destination = document.getElementsByClassName("destinationC")[0];
     let launchElement = document.querySelector(".launch");
@@ -32,18 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-   /* function launchRocket() {
-        if (rocketStatus.engine === "On" && launchStatus === "clickable") {
-            console.log("Launching the rocket");
-            launchElement.style.border = "10px solid green"; // Set the border
-            launchElement.style.backgroundColor = "green"; // Set the background color
-        } else {
-            console.log("Rocket launch not possible. Ensure engine is on and ready to launch.");
-        }
-    }*/
 
     function setDistance(){
-        let chosenDes = document.querySelector('input[name="des"] :checked').value.trim();
+        let chosenDes = document.querySelector('input[name="des"]:checked').value.trim();
         let distanceInput = document.querySelector(".distanceInput");
         switch (chosenDes.toLowerCase()){
             case "mars":
@@ -52,18 +43,24 @@ document.addEventListener("DOMContentLoaded", function() {
             case "moon":
                 distanceInput.value = "384400";
                 break;
-            case "saturn ":
-                distanceInput.value = "1352600000 ";
+            case "saturn":
+                distanceInput.value = "1352600000";
                 break;
             case "uranus":
-                distanceInput.value = "3003900000 ";
+                distanceInput.value = "3003900000";
                 break;
-            case "jupiter ":
-                distanceInput.value = "714000000000 ";
+            case "jupiter":
+                distanceInput.value = "714000000000";
                 break;
             default:
             distanceInput.value = "";
             console.log("No destination selected");
+        }
+    }
+
+    function rocketLaunch(){
+        if(rocketStatus.engine === "on"){
+            
         }
     }
 
