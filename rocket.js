@@ -81,3 +81,5 @@ document.addEventListener("DOMContentLoaded", function() {
         radio.addEventListener("change", setDistance);
     });
 });
+
+/*create a function for the  -100 ,-500 ,+100 & + 500
