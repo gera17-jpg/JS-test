@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access</title>
+</head>
+<body>
+    <div class="box">
+        <form id="accessForm">
+            <label for="name">Username</label>
+            <input type="text" name="name" class="input">
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+    <style>
+        button {
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 3px 5px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.getElementById("accessForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementsByClassName("input")[0].value;
+            window.location.href = "2ndAccess.html?name=" + encodeURIComponent(name);
+        });
+    </script>
+</body>
+</html>
